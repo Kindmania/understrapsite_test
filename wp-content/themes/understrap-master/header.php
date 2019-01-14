@@ -22,7 +22,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 	
 	<link rel="stylesheet" href="https://unpkg.com/jpncss@latest/dist/bootstrap/jpn.min.css">
-	
+	<!--adobeフォント-->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'pbe4ams',
+		  scriptTimeout: 3000,
+		  async: true
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -34,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-md navbar-light bg-white">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
